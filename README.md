@@ -56,4 +56,5 @@ Digamos que queremos inserir duas faces em nosso modelo e ver como elas são sem
 ![image](https://user-images.githubusercontent.com/14276167/179137184-b2790515-bdc4-43fe-9644-351ec5f7be06.png)
 
 #### Resultados
+![image](https://user-images.githubusercontent.com/14276167/179141161-85485c9a-8e76-4f45-94b8-c5c63deed31b.png)
 
