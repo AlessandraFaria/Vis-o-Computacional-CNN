@@ -1,4 +1,4 @@
-# Vis-o-Computacional-CNN
+# Visão-Computacional-CNN
 Execução de métodos de compute vision para classificação de imagens e encode via VAE
 
 A visão humana é incrivelmente bonita e complexa, tudo começou há bilhões de anos, onde pequenos organismos desenvolveram uma mutação que os tornou sensíveis à luz, avançando rapidamente para hoje e há uma abundância de vida no planeta, todos com sistemas visuais muito semelhantes, incluindo os olhos para capturar receptores de luz no cérebro para acessá-lo e um córtex visual para processá-lo geneticamente modificado e equilibrado
@@ -39,6 +39,50 @@ O banco de dados MNIST é um conjunto de dados de dígitos manuscritos. Possui 6
 É um bom banco de dados para pessoas que desejam experimentar técnicas de aprendizado e métodos de reconhecimento de padrões em dados do mundo real, gastando esforços mínimos em pré-processamento e formatação.
 
 Existem quatro arquivos disponíveis, que contêm separadamente treinar e testar, além de imagens e rótulos.
+
+## Convolutional neural networks 
+As redes neurais convolucionais se distinguem de outras redes neurais por terem desempenho superior com dados de imagem e áudio. Eles têm 3 camadas, à medida que as formas são revestidas pelos dados da imagem progridem da CNN, ela começa a reconhecer elementos ou maiores até mesmo identificar o objeto identificado ou objeto. A cada camada, a CNN aumenta em sua complexidade, identificando maiores porções da imagem.
+
+convolutional layer
+
+pool layer
+
+Fully connected (FC) layer
+
+#### convolutional layer
+A camada convolucional é a parte central de uma CNN, é onde ocorre a maior parte da computação. Ela precisa de alguns componentes, que são dados de entrada, um filtro e um mapa de recursos. 
+
+Considerando uma imagem colorida, composta por uma matriz de pixels em 3D. A entrada terá três dimensões — altura, largura e profundidade — que correspondem ao RGB em uma imagem. Também temos um detector de feição, também conhecido como kernel ou filtro, que irá percorrer os campos receptivos da imagem, verificando se a feição está presente. Esse processo é conhecido como convolução.
+
+Embora possa variar em tamanho, o tamanho do filtro é normalmente uma matriz 3x3; isso também determina o tamanho do campo receptivo. O filtro é  aplicado a uma área da imagem em que um produto escalar é calculado entre os pixels de entrada e o filtro. Este produto escalar é então alimentado em uma matriz de saída. Depois, o filtro muda um passo, repetindo o processo até que o kernel tenha varrido toda a imagem. A saída final da série de produtos escalares da entrada e do filtro é conhecida como mapa de recursos, mapa de ativação ou recurso convoluído.
+
+Na imagem abaixo vemos que , cada valor de saída no mapa de recursos não precisa se conectar a cada valor de pixel na imagem de entrada. Ele só precisa se conectar ao campo receptivo, onde o filtro está sendo aplicado.
+
+![image](https://user-images.githubusercontent.com/14276167/179381754-89dfc357-6549-4854-9559-efc1f8070ef1.png)
+
+Os pesos no detector de recursos permanecem fixos à medida que ele se move pela imagem, isso é conhecido como compartilhamento de parâmetros. Alguns parâmetros, como os valores de peso, se ajustam durante o treinamento através do processo de retropropagação e gradiente descendente. No entanto, existem três hiperparâmetros que afetam o tamanho do volume da saída que precisam ser definidos antes do início do treinamento da rede neural. 
+
+Esses incluem:
+
+1. O número de filtros -> afeta a profundidade da saída. Por exemplo, três filtros distintos produziriam três mapas de recursos diferentes, criando uma profundidade de três.
+
+2. Stride -> é a distância, ou número de pixels, que o kernel se move sobre a matriz de entrada. Embora valores de passada de dois ou mais sejam raros, uma passada maior produz uma saída menor.
+
+3. Zero padding ->  geralmente é usado quando os filtros não se ajustam à imagem de entrada. Isso define todos os elementos que estão fora da matriz de entrada para zero, produzindo uma saída maior ou de tamanho igual. 
+
+Após cada operação de convolução, uma CNN aplica uma transformação de Unidade Linear Retificada (ReLU) ao mapa de características, para introduzir a não linearidade no modelo.
+
+#### Pooling Layer
+Conduz a redução de dimensionalidade, reduzindo o número de parâmetros na entrada. Varre um filtro em toda a entrada, esse filtro não possui pesose sim um kernel que aplica uma função de agregação aos valores dentro do campo receptivo e preenche a matriz de saída.
+
+#### Fully-Connected Layer
+Essa camada realiza a tarefa de classificação com base nas características extraídas das camadas anteriores e seus diferentes filtros. Enquanto as camadas convolucionais e de pooling tendem a usar funções ReLu, as camadas FC geralmente aproveitam uma função de ativação softmax para classificar as entradas adequadamente, produzindo uma probabilidade de 0 a 1.
+
+Na camada Fully-Connected Layer, cada nó na camada de saída se conecta diretamente a um nó na camada anterior.
+
+### Implementação do Convolutional neural networks para encontrar semelhanças de imagem
+- Configurando a estrutura básica do código com transformações básicas
+- Arquitetura do modelo de design com menos de 8.000 parâmetros
 
 ## Siamese Network
 Nas Siamese Network existem dois conjuntos idênticos de camadas convolucionais que realmente compartilham filtros, ou seja eles têm duas entradas e têm apenas uma saída, então você tem duas imagens de entrada, por exemplo, e apenas uma pontuação de saída.
