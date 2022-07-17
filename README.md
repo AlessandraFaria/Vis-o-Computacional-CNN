@@ -84,6 +84,15 @@ Na camada Fully-Connected Layer, cada nó na camada de saída se conecta diretam
 - Configurando a estrutura básica do código com transformações básicas
 - Arquitetura do modelo de design com menos de 8.000 parâmetros
 
+![image](https://user-images.githubusercontent.com/14276167/179382307-8041bedf-d0e1-4eaa-b940-9c72b705246a.png)
+
+### Resultados
+
+- Acurácia : 98.66%
+- Loss : 0.0464
+
+![image](https://user-images.githubusercontent.com/14276167/179382424-b1cf53f7-bb88-4e0d-be83-97045db330a4.png)
+
 ## Siamese Network
 Nas Siamese Network existem dois conjuntos idênticos de camadas convolucionais que realmente compartilham filtros, ou seja eles têm duas entradas e têm apenas uma saída, então você tem duas imagens de entrada, por exemplo, e apenas uma pontuação de saída.
 
@@ -100,5 +109,8 @@ Digamos que queremos inserir duas faces em nosso modelo e ver como elas são sem
 ![image](https://user-images.githubusercontent.com/14276167/179137184-b2790515-bdc4-43fe-9644-351ec5f7be06.png)
 
 #### Resultados
+- Acurácia: 50.00%
+- Loss: 0.2500 
+
 ![image](https://user-images.githubusercontent.com/14276167/179141161-85485c9a-8e76-4f45-94b8-c5c63deed31b.png)
 
