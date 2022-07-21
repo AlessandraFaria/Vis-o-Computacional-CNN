@@ -83,6 +83,7 @@ Na camada Fully-Connected Layer, cada nó na camada de saída se conecta diretam
 ### Implementação do Convolutional neural networks para encontrar semelhanças de imagem
 - Configurando a estrutura básica do código com transformações básicas
 - Arquitetura do modelo de design com menos de 8.000 parâmetros
+ Configuração dos hiperparâmetros
 
 ![image](https://user-images.githubusercontent.com/14276167/179382307-8041bedf-d0e1-4eaa-b940-9c72b705246a.png)
 
