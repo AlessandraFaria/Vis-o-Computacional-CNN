@@ -1,4 +1,6 @@
 # Visão-Computacional-CNN
+## VÍDEO https://www.youtube.com/watch?v=LFxRdV0qDrc
+
 Execução de métodos de compute vision para classificação de imagens e encode via VAE
 
 A visão humana é incrivelmente bonita e complexa, tudo começou há bilhões de anos, onde pequenos organismos desenvolveram uma mutação que os tornou sensíveis à luz, avançando rapidamente para hoje e há uma abundância de vida no planeta, todos com sistemas visuais muito semelhantes, incluindo os olhos para capturar receptores de luz no cérebro para acessá-lo e um córtex visual para processá-lo geneticamente modificado e equilibrado
